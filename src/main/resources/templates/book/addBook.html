@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Library</title>
+<title>Add Book</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
@@ -10,23 +10,17 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.html">LibraryApp</a>
+      <a class="navbar-brand" href="/">LibraryApp</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="page1.html">Page 1</a></li>
-      <li><a href="page2.html">Page 2</a></li>
-      <li><a href="page3.html">Page 3</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/feature.html">Feature</a></li>
+      <li class="active"><a href="book/addBook">Add Book</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="container">
-  <h1>Welcome to the Library of Books</h1>
-  
-  
-  <!--Another Form to add a book  -->
-  
     <div class="container">
         <br>
         <h1 style="color:black">Enter New Book</h1>
@@ -41,12 +35,9 @@
             </div>
                             
         	<button class="btn btn-primary">Create Book</button>
-        <a class= "btn btn-primary" th:href="@{allEmployees}">Back</a>
+        </form>	
+       <!--  <a class= "btn btn-primary" th:href="@{/}">Back</a> -->
     </div> 
   
-  
-  
-</div>
-
 </body>
 </html>

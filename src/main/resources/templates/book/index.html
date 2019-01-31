@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Library</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">LibraryApp</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="feature.html">Feature</a></li>
+      <li><a href="book/addBook">Add Book</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Welcome to the Library of Books</h1>
+	<h3>Check out our Books!</h3>
+		
+		<div class="row">
+			<div th:each="book : ${books}">
+		        <div class="col-md-6">
+		            <div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <p th:text="${book.title}"/>
+						</div>
+					    <div class="panel-body">
+							<p th:text="${book.author}"/>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+  
+</div>
+
+</body>
+</html>
