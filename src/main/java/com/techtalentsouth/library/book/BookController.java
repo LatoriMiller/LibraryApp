@@ -25,16 +25,16 @@ public class BookController {
 	@GetMapping("/book/addBook")
 	public ModelAndView showAddBook(Book book) {
 		ModelAndView mv = new ModelAndView("book/addBook");
-		mv.addObject("books", bookRepository.findAll());
+		//mv.addObject("books", bookRepository.findAll());
 		return mv;
 	}
 	
 	@PostMapping("/book/newBook")
 	public ModelAndView createBook(Book book) {
 		ModelAndView mv = new ModelAndView("book/index");
-		mv.addObject("books", bookRepository.findAll());
 		Book newBook = bookRepository.save(new Book(book.getTitle(), book.getAuthor()));
 		mv.addObject("newBook", newBook);
+		mv.addObject("books", bookRepository.findAll());
 		return mv;
 	}
 	
